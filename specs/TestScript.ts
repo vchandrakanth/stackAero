@@ -21,41 +21,31 @@ describe('stackaero excercise ', async function () {
 
   
   it('Step 1: open the brower and login', async function (): Promise<any> {
-
     await utils.goToMainPage();
     let loginPage = new LoginPage();
     await loginPage.login(propdata.userName, propdata.passWord, propdata.tenant);
     loginPage.verifyPageTitle();
-    
   });
 
   it('Step 2: Verify the Help Guide Menu', async function (): Promise<any> {
     let menuPage = new MenuPage();
     await menuPage.clickhelpGuideMenu();
     menuPage.verifyhelpGuidePageTitle();
-
   });
 
   it('Step 3: Verify the Home Menu', async function (): Promise<any> {
-
     let menuPage = new MenuPage();
     await menuPage.clickhomeMenu();
     menuPage.verifyhomePageTitle();
-
   });
 
    it('Step 4: Verify the Social Menu', async function (): Promise<any> {
-
     let menuPage = new MenuPage();
     await menuPage.clicksocialMenu();
-
   });
 
-
-  afterEach(function () {
-      
+  afterEach(function () {      
     jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
   });
-
 });
 
