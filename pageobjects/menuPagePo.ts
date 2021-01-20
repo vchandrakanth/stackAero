@@ -11,7 +11,7 @@ export class MenuPage {
     socialPageTitle = element(by.xpath('//strong[text()="socialFeed"]'));
     
     async clickhelpGuideMenu() {
-       await this.helpGuideMenu.click();
+        await this.waitForElementToBeClickable(helpGuideMenu);
        console.log("clicked on Help Guide menu");
       } 
 
@@ -27,7 +27,7 @@ export class MenuPage {
         }
         
         async clickhomeMenu() {
-            await this.homeMenu.click();
+            await this.waitForElementToBeClickable(homeMenu);
             console.log("clicked on Home menu");
             this.homePageTitle.getText().then(function(text1) {
             console.log("The home page title is " + text1);
@@ -46,7 +46,7 @@ export class MenuPage {
          }
          
          async clicksocialMenu() {
-            await this.socialMenu.click();
+             await this.waitForElementToBeClickable(socialMenu);
             console.log("clicked on Social menu");
             this.socialPageTitle.getText().then(function(text) {
                 console.log("The Social page title is " + text);
