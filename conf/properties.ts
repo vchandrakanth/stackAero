@@ -1,5 +1,5 @@
 module.exports  = {
-qaUrl: "https://sketch.cloud.stacklynx.com/#!/",
+qaUrl: "http://web-sketch-app.dev.stacklynx.com/#!/",
 seleniumServerUrl : "http://localhost:4444/wd/hub",
 userName : "zoetisadm",
 passWord : "zoetis@123",
