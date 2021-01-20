@@ -2,14 +2,12 @@ import { browser, element, by, By, $, $$, ExpectedConditions } from 'protractor'
 import { LoginPage } from '../pageobjects/loginPagePo';
 import { MenuPage } from '../pageobjects/menuPagePo';
 import { threadId } from 'worker_threads';
-
 import { async } from 'q';
 import fs = require('fs');
 import { createWriteStream } from 'fs';
 
 let utils = require("../utils/utils");
 let propdata = require('../conf/properties');
-
 
 describe('stackaero excercise ', async function () {
   var originalTimeout;
@@ -18,7 +16,6 @@ describe('stackaero excercise ', async function () {
     originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 200000;
   });
-
   
   it('Step 1: open the brower and login', async function (): Promise<any> {
     await utils.goToMainPage();
