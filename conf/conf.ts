@@ -16,7 +16,7 @@ export let config: Config = {
         writeReportFreq: 'asap',
         clearFoldersBeforeTest: true
     }],
-  specs: ['../specs/*.js'],
+  specs: ['../TestScript.js'],
 
   noGlobals: true,
 
