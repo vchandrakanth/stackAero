@@ -8,7 +8,6 @@ export class LoginPage {
     signInButton = element(by.xpath('//button[@type="submit"]'));
     helpGuideMenu = element(by.xpath('//*[@id="header"]/div/div/nav/div/ul/li[1]/a'));
 
-    //Methods for Operation
     async setName(name: string) {
            
      await  this.userName.sendKeys(name);
@@ -25,18 +24,13 @@ export class LoginPage {
     }
 
     async login(user: any,pass: any,tenant: any){
-   
         await this.setName(user);
         await this.setpassWD(pass);
         await this.settenant(tenant);
-        browser.sleep(5000);
         await this.clickButton();
-        browser.sleep(10000);
-        
     }
 
     async verifyPageTitle() {
-
         var browserTitle = browser.getTitle().then(function(webpageTitle){
             console.log("The title of the webpage is " + webpageTitle);
             if (webpageTitle === 'StackLynx - Sketch'){
