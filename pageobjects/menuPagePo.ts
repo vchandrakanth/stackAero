@@ -1,11 +1,4 @@
-// Because this file references protractor, you'll need to have it as a project
-// dependency to use 'protractor/globals'. Here is the full list of imports:
-//
-// import {browser, element, by, By, $, $$, ExpectedConditions}
-//   from 'protractor/globals';
-//
 import { browser, element, by } from 'protractor';
-// const protractorHelper = require("protractor-helper");
 
 export class MenuPage {
     
