@@ -1,4 +1,3 @@
-// See README.md for important details.
 import { browser, element, by, By, $, $$, ExpectedConditions } from 'protractor';
 import { LoginPage } from '../pageobjects/loginPagePo';
 import { MenuPage } from '../pageobjects/menuPagePo';
