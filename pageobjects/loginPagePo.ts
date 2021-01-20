@@ -36,8 +36,7 @@ export class LoginPage {
     }
 
     async verifyPageTitle() {
-      
-        // return browser.getTitle();
+
         var browserTitle = browser.getTitle().then(function(webpageTitle){
             console.log("The title of the webpage is " + webpageTitle);
             if (webpageTitle === 'StackLynx - Sketch'){
@@ -45,9 +44,6 @@ export class LoginPage {
             }else{
                 console.log("Page title mismatched");
             }
-        })
-        
-        
-        
+        })       
       }
 }
