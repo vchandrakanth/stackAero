@@ -1,4 +1,5 @@
 import { browser, element, by } from 'protractor';
+import { waitForElementToBeClickable } from '../utils/utils';
 const protractorHelper = require("protractor-helper");
 
 export class LoginPage {
@@ -27,6 +28,7 @@ export class LoginPage {
         await this.setName(user);
         await this.setpassWD(pass);
         await this.settenant(tenant);
+        await this.waitForElementToBeClickable(clickButton);
         await this.clickButton();
     }
 
