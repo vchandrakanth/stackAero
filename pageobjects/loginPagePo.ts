@@ -21,7 +21,7 @@ export class LoginPage {
     }
 
     async clickButton() {
-       await this.signInButton.click();
+        await this.waitForElementToBeClickable(signInButton);
     }
 
     async login(user: any,pass: any,tenant: any){
@@ -29,7 +29,6 @@ export class LoginPage {
         await this.setpassWD(pass);
         await this.settenant(tenant);
         await this.waitForElementToBeClickable(clickButton);
-        await this.clickButton();
     }
 
     async verifyPageTitle() {
