@@ -9,8 +9,6 @@ export class MenuPage {
     socialMenu = element(by.xpath('//a[@href="/#!/socialFeed" and @class="nav-height ng-scope"]'));
     homePageTitle = element(by.xpath('//a[@href="#task_execution_status_chart"'));
     socialPageTitle = element(by.xpath('//strong[text()="socialFeed"]'));
-
-    //Methods for Operation
     
     async clickhelpGuideMenu() {
         browser.sleep(10000);
@@ -20,7 +18,7 @@ export class MenuPage {
        browser.sleep(100000);
       } 
 
-        async verifyhelpGuidePageTitle() {
+       async verifyhelpGuidePageTitle() {
                var helpGuideTitletxt =  this.helpGuideTitle.getText().then(function(text1){
                 console.log("The help guide Title is " + text1);
                 if (text1 === 'StackAero Documentation'){
@@ -40,8 +38,7 @@ export class MenuPage {
             console.log("The home page title is " + text1);
             browser.sleep(100000);
                 });
-         
-            }
+             }
 
             async verifyhomePageTitle() {
                 var homePageTitletxt =  this.homePageTitle.getText().then(function(text2){
@@ -63,7 +60,5 @@ export class MenuPage {
                 console.log("The Social page title is " + text);
                 browser.sleep(100000);
                 });
-         
-}
-
+         }
 }
