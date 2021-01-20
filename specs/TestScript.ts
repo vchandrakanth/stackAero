@@ -22,18 +22,11 @@ describe('stackaero excercise ', async function () {
   
   it('Step 1: open the brower and login', async function (): Promise<any> {
 
-    //Open the Url
     await utils.goToMainPage();
-    //Login
     let loginPage = new LoginPage();
     await loginPage.login(propdata.userName, propdata.passWord, propdata.tenant);
-
-    // console.log("the browser title is "+loginPage.getPageTitle());
-    
-    // expect(loginPage.getPageTitle()).toMatch("zoetisadm");
     loginPage.verifyPageTitle();
     
-   
   });
 
   it('Step 2: Verify the Help Guide Menu', async function (): Promise<any> {
@@ -55,12 +48,9 @@ describe('stackaero excercise ', async function () {
 
     let menuPage = new MenuPage();
     await menuPage.clicksocialMenu();
-    // menuPage.verifyhelpGuideTitle();
 
   });
 
-
-  
 
   afterEach(function () {
       
