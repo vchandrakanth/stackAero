@@ -1,0 +1,27 @@
+{
+  "name": "protractorautomation",
+  "version": "1.0.0",
+  "description": "Protractor Typescript automation framework",
+  "main": "conf.js",
+  "dependencies": {
+    "@types/jasmine": "^3.3.9",
+    "@types/jasminewd2": "^2.0.6",
+    "@types/node": "^10.12.26",
+    "protractor": "^5.4.2",
+    "protractor-screenshoter-plugin": "^0.10.3"
+  },
+  "devDependencies": {
+    "protractor-helper": "^3.7.2"
+  },
+  "scripts": {
+    "pretest": "npm run tsc",
+    "test": "protractor ./build/conf/conf.js",
+    "tsc": "tsc"
+  },
+  "keywords": [
+    "Protractor",
+    "Typescript"
+  ],
+  "author": "",
+  "license": "ISC"
+}
